@@ -21,7 +21,7 @@ const options = {
     // Task 6 Hint: You can use state.photos.splice()
     // `splice()` documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
     removePhoto: (state, action) => {
-      state.photos.splice(action.payload, 1);
+      state.photos = state.photos.filter(photo => photo.id !== action.payload);
     }
   },
 };
